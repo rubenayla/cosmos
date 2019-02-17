@@ -13,7 +13,7 @@ html, body {
 }
 
 header {
-	overflow: hidden;
+	overflow: visible;
 	background-color: #181c1f;
 	position: fixed;
 	top: 0;
