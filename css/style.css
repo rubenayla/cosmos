@@ -116,6 +116,7 @@ footer {
 .footer-middle img {
 	display: inline-block;
 	height: 100px;
+	border-radius: 50px;/*Half of the height to make it round*/
 }
 
 .footer-right {
