@@ -52,6 +52,11 @@ header a.active {
 	color: #fff;
 }
 
+a {
+	text-decoration: none;
+	color: white;
+}
+
 #logo {
 	padding: 8px;
 }
@@ -81,13 +86,45 @@ header a.active {
 	}
 }
 
-
-
-
-
 #main {
 	padding: 16px;
 	margin-top: 54px;
 	/*height: 1000px;*/
 
+}
+
+footer {
+	overflow: hidden; /*So that the background keeps visible*/
+	background-color: #181c1f;
+	width: 100%;
+	padding: 8px 16px;
+	text-align: center;
+
+}
+
+.footer-left {
+	float: left;
+	display: inline-block;
+	padding: 8px;
+}
+
+.footer-middle {
+	display: inline-block;
+	padding: 16px;
+}
+
+.footer-middle img {
+	display: inline-block;
+	height: 100px;
+}
+
+.footer-right {
+	float: right;
+	display: inline-block;
+	padding: 8px;
+}
+
+ion-icon {
+	font-size: 24px;
+	margin: 8px;
 }
