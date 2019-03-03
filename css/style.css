@@ -133,6 +133,7 @@ ion-icon {
 		height: auto;
 		top: auto;
 		bottom: 0px;
+		padding: 16px;
 	}
 	
 	.header-left {
@@ -153,7 +154,15 @@ ion-icon {
 	}
 
 	#main {
-		margin: 0 0 500px 0;
+		margin: 0;
+	}
+
+	footer {
+		margin: 0 0 200px 0;
+	}
+
+	#logo {
+		display: none;
 	}
 
 }
