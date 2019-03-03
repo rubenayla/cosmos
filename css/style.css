@@ -134,6 +134,8 @@ ion-icon {
 		top: auto;
 		bottom: 0px;
 		padding: 16px;
+
+		box-shadow: 0px -1px 8px #0008;/*Para que acabe pronto sin ser muy oscura*/
 	}
 	
 	.header-left {
