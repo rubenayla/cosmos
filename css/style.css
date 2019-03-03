@@ -20,6 +20,8 @@ header {
 	width: 100%;
 	height: 56px;
 	padding: 0px 8px;
+	z-index: 1;
+	box-shadow: 0px 1px 8px #0008;/*Para que acabe pronto sin ser muy oscura*/
 }
 
 .header-left {
@@ -53,8 +55,12 @@ header a.active {
 }
 
 a {
-	text-decoration: none;
-	color: white;
+	text-decoration: underline;
+	color: #eef;
+}
+
+a:hover {
+	color: #bbc;
 }
 
 #logo {
@@ -63,27 +69,6 @@ a {
 
 #logo img {
 	height: 40px;
-}
-
-
-@media screen and (max-width: 600px) { /*500px*/
-	header {
-		height: auto;
-	}
-	
-	.header-left {
-		float: none;
-	}
-
-	.header-right {
-		float: none;
-	}
-
-	header a {
-		display: block;
-		text-align: left;
-
-	}
 }
 
 #main {
@@ -125,6 +110,11 @@ footer {
 	padding: 8px;
 }
 
+.footer-right a {
+	color: white;
+	text-decoration: none;
+}
+
 ion-icon {
 	font-size: 24px;
 	margin: 8px;
@@ -134,4 +124,29 @@ ion-icon {
 	padding: 16px 8px;
 	width: 40vw;
 	max-width: 512px;
+}
+
+
+
+
+@media screen and (max-width: 600px) { /*500px*/
+	header {
+		height: auto;
+		top: auto;
+		bottom: 0px;
+	}
+	
+	.header-left {
+		float: none;
+	}
+
+	.header-right {
+		float: none;
+	}
+
+	header a {
+		display: block;
+		text-align: left;
+
+	}
 }
