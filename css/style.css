@@ -4,8 +4,6 @@ html, body {
 	background: url('../images/bg1.jpg') no-repeat center fixed;
 	background-size: cover;
 	margin: 0;
-
-	
 }
 
 * {
@@ -131,6 +129,7 @@ ion-icon {
 
 @media screen and (max-width: 600px) { /*500px*/
 	header {
+		/*To the bottom of the screen vertically*/
 		height: auto;
 		top: auto;
 		bottom: 0px;
@@ -146,7 +145,15 @@ ion-icon {
 
 	header a {
 		display: block;
-		text-align: left;
+		text-align: center;
 
+		font-size: x-small;
+		line-height: 16px;
+		padding: 2px 8px;
 	}
+
+	#main {
+		margin: 0 0 500px 0;
+	}
+
 }
