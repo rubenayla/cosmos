@@ -1,9 +1,15 @@
+:root {
+	--color-main: #181c1f;
+}
+
 html, body {
 	font-family: 'Open Sans', Helvetica, sans-serif;
 	color: white;
 	background: url('../images/bg1.jpg') no-repeat center fixed;
 	background-size: cover;
 	margin: 0;
+	position: relative;
+	height: 100%;/*Not the end of the content*/
 }
 
 * {
@@ -12,7 +18,7 @@ html, body {
 
 header {
 	overflow: visible;
-	background-color: #181c1f;
+	background: var(--color-main);
 	position: fixed;
 	top: 0;
 	width: 100%;
@@ -77,12 +83,13 @@ a:hover {
 }
 
 footer {
-	overflow: hidden; /*So that the background keeps visible*/
-	background-color: #181c1f;
+	position: absolute;/*So that bottom alters the position not the margin*/
+	overflow: hidden;/*So that the background keeps visible*/
+	background-color: var(--color-main);
 	width: 100%;
+	bottom: 0px;
 	padding: 0px 16px;
 	text-align: center;
-
 }
 
 .footer-left {
