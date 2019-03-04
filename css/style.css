@@ -2,13 +2,13 @@
 	--color-main: #181c1f;
 }
 
-html, body {
+body {
 	font-family: 'Open Sans', Helvetica, sans-serif;
 	color: white;
 	background: url('../images/bg1.jpg') no-repeat center fixed;
 	background-size: cover;
 	margin: 0;
-	position: relative;
+	position: relative;/*To make the footer absolute position work*/
 	height: 100%;/*Not the end of the content*/
 }
 
