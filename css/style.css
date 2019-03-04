@@ -2,14 +2,17 @@
 	--color-main: #181c1f;
 }
 
+html {
+	position: relative;/*To make the footer absolute position work*/
+	height: 100%;/*Not finish at the end of the content (with the body)*/
+}
+
 body {
 	font-family: 'Open Sans', Helvetica, sans-serif;
 	color: white;
 	background: url('../images/bg1.jpg') no-repeat center fixed;
 	background-size: cover;
 	margin: 0;
-	position: relative;/*To make the footer absolute position work*/
-	height: 100%;/*Not the end of the content*/
 }
 
 * {
@@ -83,11 +86,11 @@ a:hover {
 }
 
 footer {
-	position: absolute;/*So that bottom alters the position not the margin*/
+	position: absolute;/*So that bottom alters the position (outside of the normal flow), not the margin*/
 	overflow: hidden;/*So that the background keeps visible*/
 	background-color: var(--color-main);
 	width: 100%;
-	bottom: 0px;
+	bottom: 0px;/*0px of the html*/
 	padding: 0px 16px;
 	text-align: center;
 }
