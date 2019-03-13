@@ -104,7 +104,6 @@ footer {
 .footer-left {
 	float: left;
 	display: inline-block;
-	padding: 8px;
 }
 
 .footer-middle {
@@ -133,6 +132,7 @@ footer {
 footer ul {
 	list-style: none;/*Sin bolitas*/
 	font-size: small;
+	padding: 16px;
 }
 
 footer ul a {
@@ -151,7 +151,9 @@ ion-icon {
 	display: inline-block;
 }
 
-
+.twitter iframe {
+	box-shadow: 8px 16px 32px -8px #0008;
+}
 
 
 @media screen and (max-width: 600px) { /*500px*/
