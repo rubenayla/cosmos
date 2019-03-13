@@ -98,6 +98,7 @@ footer {
 	padding: 0px 16px;
 	text-align: center;
 
+	transition: bottom .5s;
 }
 
 .footer-left {
@@ -115,6 +116,7 @@ footer {
 	display: inline-block;
 	height: 100px;
 	border-radius: 50px;/*Half of the height to make it round*/
+	box-shadow: 4px 8px 20px 0px #0008;
 }
 
 .footer-right {
