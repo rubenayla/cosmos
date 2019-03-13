@@ -3,8 +3,8 @@
 	--text-header-color: #ccc;/*#ccc*/
 	--active-header-color: #fff;/*#fff*/
 
-	--link-color: #eef;
-	--link-hover-color: #bbd;
+	--link-color: #eef;/*#eef*/
+	--link-hover-color: #bbc;/*#bbc*/
 }
 
 html, body {
@@ -13,11 +13,6 @@ html, body {
 	background: url('../images/bg1.jpg') no-repeat center fixed;
 	background-size: cover;
 	margin: 0;
-}
-
-body {
-	min-height: 100vh;
-	/*position: relative;*/
 }
 
 * {
@@ -88,9 +83,6 @@ a:hover {
 }
 
 footer {
-	/*position: sticky;
-	bottom: 0;*/
-	overflow: hidden; /*So that the background keeps visible*/
 	background-color: var(--main-color);
 	width: 100%;
 	padding: 0px 16px;
@@ -156,12 +148,9 @@ ion-icon {
 @media screen and (max-width: 600px) { /*500px*/
 	header {
 		/*To the bottom of the screen vertically*/
-		position: fixed;
 		top: auto;
 		bottom: 0%;
-
 		height: auto;
-		width: 100%;
 
 		padding: 8px;
 
@@ -198,7 +187,7 @@ ion-icon {
 	footer {
 		margin: 0 0 200px 0;
 	}
-
+hornet
 	#logo {
 		display: none;
 	}
