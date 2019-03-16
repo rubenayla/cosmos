@@ -82,6 +82,11 @@ a:hover {
 	padding: 72px 16px 16px 16px;
 }
 
+.simple-list {
+	list-style: none;/*Sin bolitas*/
+	padding: 16px;
+}
+
 footer {
 	overflow: hidden;
 	background-color: var(--main-color);
@@ -139,7 +144,7 @@ ion-icon {
 	padding: 16px 8px;
 	width: 40vw;
 	max-width: 512px;
-	display: inline-block;
+	display: inline-flex;
 }
 .twitter iframe {
 	box-shadow: 8px 16px 32px -8px #0008;
