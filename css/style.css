@@ -32,6 +32,20 @@ html, body {
 	margin: 0;
 }
 
+body {
+	/*min-height 100vh (not 100%. Would be of the html)
+	 to keep the footer down when there isn't content. But 
+	 a padding at the bottom, below the footer, so that it 
+	 doesn't overlap the content. It would do that because
+	 it's position is absolute, so that the bottom property
+	 works. The bottom property works relative to the nearest
+	 parent element that hasn't static positioning, so the 
+	 body has relative position.*/
+	min-height: 100vh;
+	padding-bottom: 140px;
+	position: relative;
+}
+
 * {
 	box-sizing: border-box;
 }
@@ -105,13 +119,16 @@ a:hover {
 }
 
 footer {
-	overflow: hidden;
+	position: absolute;
+	bottom: 0;
+	height: 140px;
 	background-color: var(--main-color);
 	width: 100%;
 	padding: 0px 16px;
 	text-align: center;
 
-	transition: bottom .5s;
+	display: flex;
+	justify-content: space-between;
 }
 
 .footer-left {
