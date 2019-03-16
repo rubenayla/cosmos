@@ -1,3 +1,4 @@
+/*Color variables*/
 :root {
 	--main-color: #181c1f;/*#181c1f*/
 	--text-header-color: #ccc;/*#ccc*/
@@ -5,6 +6,21 @@
 
 	--link-color: #eef;/*#eef*/
 	--link-hover-color: #bbc;/*#bbc*/
+}
+
+/*Custom scrollbar*/
+::-webkit-scrollbar {
+	width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #ccc;
+	border-radius: 50px;
+	border: solid 2px #fff;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #aaa;
 }
 
 html, body {
