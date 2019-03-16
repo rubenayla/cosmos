@@ -41,8 +41,7 @@ header {
 header a {
 	/* MATERIAL DESIGN. 24 object, 16 padding, 56 total*/
 	float: inherit;
-	display: inline-block;
-	font-size: small;
+	font-size: 16px;
 	line-height: 24px;
 	padding: 16px 8px;
 
@@ -69,13 +68,14 @@ a:hover {
 	color: var(--link-hover-color);
 }
 
-#logo {
+#logo-header {
 	padding: 8px;
+	border-radius: 1000px;
 }
 
-#logo img {
+#logo-header img {
 	height: 40px;
-	border-radius: 80px;
+	border-radius: 1000px;
 }
 
 #main {
@@ -190,7 +190,7 @@ ion-icon {
 		margin: 0 0 200px 0;
 	}
 
-	#logo {
+	#logo_header {
 		display: none;
 	}
 
