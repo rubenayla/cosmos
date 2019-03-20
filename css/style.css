@@ -10,13 +10,17 @@
 
 /*Custom scrollbar*/
 ::-webkit-scrollbar {
-	width: 12px;
+	width: 8px;
+}
+
+::-webkit-scrollbar-track {
+	background: var(--main-color);
 }
 
 ::-webkit-scrollbar-thumb {
 	background: #bbb;
 	border-radius: 50px;
-	border: solid 2px #fff;
+	border-left: solid 2px var(--main-color);
 }
 
 ::-webkit-scrollbar-thumb:hover {
