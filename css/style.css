@@ -6,6 +6,18 @@
 
 	--link-color: #eef;/*#eef*/
 	--link-hover-color: #bbc;/*#bbc*/
+
+	--text-color: #fff;
+
+	/*Light version*/
+	/*--main-color: #fff;
+	--text-header-color: #333;
+	--active-header-color: #000;
+
+	--link-color: #002;
+	--link-hover-color: #559;
+
+	--text-color: #000;*/
 }
 
 /*Custom scrollbar*/
@@ -30,7 +42,7 @@
 
 html, body {
 	font-family: 'Open Sans', Helvetica, sans-serif;
-	color: white;
+	color: var(--text-color);
 	background: url('../images/bg1.jpg') no-repeat center fixed;
 	background-size: cover;
 	margin: 0;
