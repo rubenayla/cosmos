@@ -41,7 +41,7 @@
 }
 
 html, body {
-	font-family: 'Open Sans', Helvetica, sans-serif;
+	font-family: 'Open Sans', Roboto, Helvetica, Arial, sans-serif;
 	color: var(--text-color);
 	background: url('../images/bg1.jpg') no-repeat center fixed;
 	background-size: cover;
