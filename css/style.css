@@ -58,7 +58,7 @@ body {
 	 parent element that hasn't static positioning, so the 
 	 body has relative position.*/
 	min-height: 100vh;
-	padding-bottom: 140px;
+	padding-bottom: 140px;/*Space for the footer*/
 	position: relative;
 }
 
