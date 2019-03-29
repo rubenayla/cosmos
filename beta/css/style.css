@@ -3,8 +3,8 @@
 	--text-header-color: #ddd;/*#ddd*/
 	--active-header-color: #fff;/*#fff*/
 
-	--link-color: #eef;/*#eef*/
-	--link-hover-color: #bbc;/*#bbc*/
+	--link-color: #248;/*#eef*/
+	--link-hover-color: #248;/*#bbc*/
 
 	--text-color: black;
 
@@ -71,7 +71,7 @@ header {
 	top: 0;
 	width: 100%;
 	height: 56px;
-	z-index: 1;
+	z-index: 10;
 
 	font-size: 15px;
 	line-height: 24px;
@@ -110,6 +110,7 @@ header a {
 header a:hover {
 	color: var(--active-header-color);
 	font-weight: bold;
+	text-decoration: none;
 }
 
 header a.active {
@@ -122,18 +123,31 @@ header img {
 	height: 40px;
 }
 
+#main {
+	padding: 72px 16px 16px 16px;
+	background: #fff4;
+}
+
 a {
 	color: var(--link-color);
+	text-decoration: none;
 }
 
 a:hover {
 	color: var(--link-hover-color);
+	text-decoration: underline;
 }
 
-#main {
-	padding: 72px 16px 16px 16px;
-	background: #ddd4;
+.twitter {
+	padding: 16px 8px;
+	width: 40vw;
+	max-width: 512px;
+	display: flex;
 }
+.twitter iframe {
+	box-shadow: 4px 8px 32px -8px #0008;
+}
+
 
 .simple-list {
 	list-style: none;
@@ -144,40 +158,37 @@ footer {
 	position: absolute;
 	bottom: 0;
 	height: 140px;
-	background-color: var(--main-color);
 	width: 100%;
 	padding: 0px 16px;
+
+	background-color: var(--main-color);
 	text-align: center;
 	color: white;
 
 	display: flex;
 	justify-content: space-between;
+	align-content: space-around;
 }
 
-.footer-left {
-	float: left;
-	display: inline-block;
+.footer-left, .footer-middle, .footer-right {
+	display: flex;
 }
 
 .footer-middle {
-	display: inline-block;
 	padding: 16px;
 }
 
 .footer-middle img {
-	display: inline-block;
 	height: 100px;
-	border-radius: 50px;/*Half of the height to make it round*/
+	border-radius: 1000px;
 	box-shadow: 4px 8px 20px 0px #0008;
 }
 
 .footer-right {
-	float: right;
 	display: inline-block;
-	padding: 8px;
+	padding: 16px;
 }
-
-.footer-right a {
+footer a {
 	color: white;
 	text-decoration: none;
 }
@@ -188,23 +199,9 @@ footer ul {
 	padding: 16px;
 }
 
-footer ul a {
-	text-decoration: none;
-}
-
 ion-icon {
 	font-size: 24px;
 	margin: 8px;
-}
-
-.twitter {
-	padding: 16px 8px;
-	width: 40vw;
-	max-width: 512px;
-	display: inline-flex;
-}
-.twitter iframe {
-	box-shadow: 4px 8px 32px -8px #0008;
 }
 
 
