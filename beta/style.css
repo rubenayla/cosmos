@@ -22,17 +22,18 @@
 
 /*Custom scrollbar*/
 ::-webkit-scrollbar {
-	width: 8px;
+	width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-	background: var(--main-color);
+	background: #eee;
 }
 
 ::-webkit-scrollbar-thumb {
 	background: #bbb;
 	border-radius: 50px;
-	border-left: solid 2px var(--main-color);
+	border-left: solid 1px #eee;
+	border-right: solid 1px #eee;
 }
 
 ::-webkit-scrollbar-thumb:hover {
