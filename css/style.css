@@ -1,12 +1,13 @@
+/*Color variables*/
 :root {
 	--main-color: #181c1f;/*#181c1f*/
 	--text-header-color: #ddd;/*#ddd*/
 	--active-header-color: #fff;/*#fff*/
 
-	--link-color: #248;/*#eef*/
-	--link-hover-color: #248;/*#bbc*/
+	--link-color: #eef;/*#eef*/
+	--link-hover-color: #bbc;/*#bbc*/
 
-	--text-color: black;
+	--text-color: #fff;
 
 	/*Light version*/
 	/*--main-color: #fff;
@@ -21,18 +22,17 @@
 
 /*Custom scrollbar*/
 ::-webkit-scrollbar {
-	width: 10px;
+	width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-	background: #eee;
+	background: var(--main-color);
 }
 
 ::-webkit-scrollbar-thumb {
 	background: #bbb;
 	border-radius: 50px;
-	border-left: solid 1px #eee;
-	border-right: solid 1px #eee;
+	border-left: solid 2px var(--main-color);
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -40,15 +40,14 @@
 
 }
 
-* {
-	box-sizing: border-box;
-}
-
 html, body {
-	background: url('../images/bg2.jpg') no-repeat center fixed;
+	font-family: 'Open Sans', Roboto, Helvetica, Arial, sans-serif;
+	color: var(--text-color);
+	background: url('../images/bg1.jpg') no-repeat center fixed;
 	background-size: cover;
 	margin: 0;
 }
+
 body {
 	/*min-height 100vh (not 100%. Would be of the html)
 	 to keep the footer down when there isn't content. But 
@@ -61,147 +60,129 @@ body {
 	min-height: 100vh;
 	padding-bottom: 140px;/*Space for the footer*/
 	position: relative;
+}
 
-	font-family: 'Open Sans', Roboto, Helvetica, sans-serif;
-	color: var(--text-color);
+* {
+	box-sizing: border-box;
 }
 
 header {
 	position: fixed;
-	top: 0;
-	width: 100vw;
-	height: 56px;
-	z-index: 10;
-
-	font-size: 15px;
-	line-height: 24px;
-
-	display: flex;
 	overflow: visible;
 	background-color: var(--main-color);
-	box-shadow: 0px 1px 8px 0px #0009;
-}
-header nav, header ul, header li, header a {
-	display: flex;
-}
-header nav {
+	top: 0;
 	width: 100%;
-	justify-content: space-between;
+	height: 56px;
 	padding: 0px 8px;
+	z-index: 1;
+	box-shadow: 0px 1px 8px 0px #0008;/*Para que acabe pronto sin ser muy oscura*/
 }
 
-header ul {
-	display: flex;
-	align-items: center;
-	list-style: none;
-	padding: 16px 0;
-	margin: 0;
-	height: 56px;
+.header-left {
+	float: left;
+}
+.header-right {
+	float: right;
 }
 
 header a {
-	align-items: center;
-	margin: 0 8px;
+	/* MATERIAL DESIGN. 24 object, 16 padding, 56 total*/
+	float: inherit;
+	font-size: 16px;
+	line-height: 24px;
+	padding: 16px 8px;
 
 	color: var(--text-header-color);
+	text-align: center;
 	text-decoration: none;
 }
 
 header a:hover {
 	color: var(--active-header-color);
-	font-weight: bold;
-	text-decoration: none;
 }
 
 header a.active {
 	color: var(--active-header-color);
 	font-weight: bold;
-	border-bottom: solid 2px;
-}
-
-header img {
-	height: 40px;
-}
-
-#main {
-	padding: 72px 16px 16px 16px;
-	background: #fff4;
 }
 
 a {
+	text-decoration: underline;
 	color: var(--link-color);
-	text-decoration: none;
 }
 
 a:hover {
 	color: var(--link-hover-color);
-	text-decoration: underline;
 }
 
-.twitter {
-	padding: 16px 8px;
-	width: 40vw;
-	max-width: 512px;
-	display: flex;
-}
-.twitter iframe {
-	box-shadow: 4px 8px 32px -8px #0008;
+#logo-header {
+	padding: 8px;
+	border-radius: 1000px;
 }
 
+#logo-header img {
+	height: 40px;
+	border-radius: 1000px;
+}
+
+#main {
+	padding: 72px 16px 16px 16px;
+}
 
 .simple-list {
-	list-style: none;
+	list-style: none;/*Sin bolitas*/
 	padding: 16px;
-}
-
-footer, .footer-left, .footer-middle, .footer-right {
-	display: flex;
 }
 
 footer {
 	position: absolute;
 	bottom: 0;
-	width: 100%;
-	height: auto;
-	justify-content: space-between;
-	align-content: space-around;
-	padding: 0px 16px;
-
+	height: 140px;
 	background-color: var(--main-color);
+	width: 100%;
+	padding: 0px 16px;
 	text-align: center;
-	color: white;
+
+	display: flex;
+	justify-content: space-between;
 }
+
 .footer-left {
-	flex-flow: row wrap;
+	float: left;
+	display: inline-block;
 }
 
 .footer-middle {
+	display: inline-block;
 	padding: 16px;
 }
 
 .footer-middle img {
+	display: inline-block;
 	height: 100px;
-	border-radius: 1000px;
+	border-radius: 50px;/*Half of the height to make it round*/
 	box-shadow: 4px 8px 20px 0px #0008;
 }
 
 .footer-right {
-	padding: 16px;
-	flex-flow: column wrap;
+	float: right;
+	display: inline-block;
+	padding: 8px;
 }
-.footer-right div {
-	display: flex;
-	justify-content: center;
-}
-footer a {
+
+.footer-right a {
 	color: white;
 	text-decoration: none;
 }
 
 footer ul {
-	list-style: none;
+	list-style: none;/*Sin bolitas*/
 	font-size: small;
 	padding: 16px;
+}
+
+footer ul a {
+	text-decoration: none;
 }
 
 ion-icon {
@@ -209,38 +190,63 @@ ion-icon {
 	margin: 8px;
 }
 
+.twitter {
+	padding: 16px 8px;
+	width: 40vw;
+	max-width: 512px;
+	display: inline-flex;
+}
+.twitter iframe {
+	box-shadow: 8px 16px 32px -8px #0008;
+}
 
-@media screen and (max-width: 600px) {
-	body {
-		margin-bottom: 56px;
-	}
 
+@media screen and (max-width: 600px) { /*500px*/
 	header {
+		/*To the bottom of the screen vertically*/
+		position: fixed;
 		top: auto;
-		bottom: 0;
-		height: 80px;
-		align-content: space-between;
+		bottom: 0%;
+		height: auto;
+
+		padding: 8px;
 
 		box-shadow: 0px -1px 8px #0008;/*Para que acabe pronto sin ser muy oscura*/
-		line-height: 16px;
 	}
-	#main {
-		padding: 16px 16px 72px 16px;
-	}
+	
 	.header-left {
-		width: 40%;
+		float: left;
+		width: 50%;
+		display: flex;
 		flex-direction: column;
-		justify-content: flex-start;
 	}
 
-	header img {
+	.header-right {
+		float: right;
+		width: 50%;
+		display: flex;
+		flex-direction: column-reverse;
+	}
+
+	header a {
+		display: flex;
+		justify-content: center;
+
+		font-size: x-small;
+		line-height: 16px;
+		padding: 2px 8px;
+	}
+
+	#main {
+		padding: 16px;
+	}
+
+	footer {
+		margin: 0 0 200px 0;
+	}
+
+	#logo_header {
 		display: none;
 	}
 
-	.footer-middle {
-		align-self: center;
-	}
-	.footer-middle img {
-	height: 56px;
-}
 }
