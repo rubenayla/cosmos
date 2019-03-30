@@ -1,105 +1,246 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112431571-5"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
+:root {
+	--main-color: #181c1f;/*#181c1f*/
+	--text-header-color: #ddd;/*#ddd*/
+	--active-header-color: #fff;/*#fff*/
 
-		gtag('config', 'UA-112431571-5');
-	</script>
-	<!-- https://termsfeed.com/blog/4-ways-notify-users-cookies/ -->
-	<!-- https://policies.google.com/technologies/partner-sites -->
+	--link-color: #248;/*#eef*/
+	--link-hover-color: #248;/*#bbc*/
 
-	
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Cosmos</title>
-	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'><!-- Font -->
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="icon" type="image" href="images/favicon.ico">
+	--text-color: black;
 
-</head>
-<body>
-	<header>
-		<!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_contact_form -->
+	/*Light version*/
+	/*--main-color: #fff;
+	--text-header-color: #333;
+	--active-header-color: #000;
 
-		<nav>
-			<ul class="header-left">
-				<li>
-					<a href="index.html"><img src="images/favicon.ico" /></a>
-				</li>
-				<li>
-					<a class="active" href="index.html">Home</a>
-				</li>
-				<li>
-					<a href="education.html">Education</a>
-				</li>
-				<li>
-					<a href="research.html">Research</a>
-				</li>
-				<li>
-					<a href="making.html">Making</a>
-				</li>
-				<li>
-					<a href="culture.html">Culture</a>
-				</li>
-			</ul>
-			<ul class="header-right">
-				<li>
-					<a href="donate.html">Donate</a>
-				</li>
-				<li>
-					<a href="about.html">About</a>
-				</li>
-				<li>
-					<a href="contact.html">Contact</a>
-				</li>
-			</ul>
-		</nav>
-	</header>
-	<div id='main'>
-		<h1>Cosmos</h1>
-		<p>
-			Aerospace Association in order to support and organize aerospace projects and initiatives
-		</p>
+	--link-color: #002;
+	--link-hover-color: #559;
 
-		<!-- Twitter embedded -->
-		<div class="twitter">
-			<a class="twitter-timeline" data-width="40vw" data-height="60vh" data-theme="light" href="https://twitter.com/cosmos_urjc?ref_src=twsrc%5Etfw">Tweets by cosmos_urjc</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-		</div>
-	</div>
-	<footer>
-		<div class="footer-left">
-			<ul style="display: inline-block; float: left;">
-				<li><a href="https://docs.google.com/document/d/1JCsOie2zNQspg8h-rVtuWD5g4GTfu7inIbeGcyhlrrk/edit?usp=sharing" target="_blank">What to learn</a></li>
-				<li><a href=""></a></li>
-				<li><a href="">-</a></li>
-				
-			</ul>
-			<ul style="display: inline-block; float: right;">
-				<li><a href="cookies.html">Cookies</a></li>
-				<li><a href="">-</a></li>
-				<li><a href="">-</a></li>
-			</ul>
-		</div>
-		<div class="footer-middle">
-			<a href="index.html"><img src="images/logo.jpg" /></a>
-		</div>
-		<div class="footer-right">
-			<p>FOLLOW US</p>
-			<div>
-				<a href="https://twitter.com/cosmos_urjc" target="_blank">
-				<ion-icon name="logo-twitter"></ion-icon>
-				</a>
-				<a href="https://www.instagram.com/cosmos_urjc/" target="_blank">
-					<ion-icon name="logo-instagram"></ion-icon>
-				</a>
-			</div>
-		</div>
-	</footer>
-	<script type="text/javascript" src="https://unpkg.com/ionicons@4.4.4/dist/ionicons.js"></script>
-</body>
-</html>
+	--text-color: #000;*/
+}
+
+/*Custom scrollbar*/
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+::-webkit-scrollbar-track {
+	background: #eee;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #bbb;
+	border-radius: 50px;
+	border-left: solid 1px #eee;
+	border-right: solid 1px #eee;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #888;
+
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	background: url('../images/bg2.jpg') no-repeat center fixed;
+	background-size: cover;
+	margin: 0;
+}
+body {
+	/*min-height 100vh (not 100%. Would be of the html)
+	 to keep the footer down when there isn't content. But 
+	 a padding at the bottom, below the footer, so that it 
+	 doesn't overlap the content. It would do that because
+	 it's position is absolute, so that the bottom property
+	 works. The bottom property works relative to the nearest
+	 parent element that hasn't static positioning, so the 
+	 body has relative position.*/
+	min-height: 100vh;
+	padding-bottom: 140px;/*Space for the footer*/
+	position: relative;
+
+	font-family: 'Open Sans', Roboto, Helvetica, sans-serif;
+	color: var(--text-color);
+}
+
+header {
+	position: fixed;
+	top: 0;
+	width: 100vw;
+	height: 56px;
+	z-index: 10;
+
+	font-size: 15px;
+	line-height: 24px;
+
+	display: flex;
+	overflow: visible;
+	background-color: var(--main-color);
+	box-shadow: 0px 1px 8px 0px #0009;
+}
+header nav, header ul, header li, header a {
+	display: flex;
+}
+header nav {
+	width: 100%;
+	justify-content: space-between;
+	padding: 0px 8px;
+}
+
+header ul {
+	display: flex;
+	align-items: center;
+	list-style: none;
+	padding: 16px 0;
+	margin: 0;
+	height: 56px;
+}
+
+header a {
+	align-items: center;
+	margin: 0 8px;
+
+	color: var(--text-header-color);
+	text-decoration: none;
+}
+
+header a:hover {
+	color: var(--active-header-color);
+	font-weight: bold;
+	text-decoration: none;
+}
+
+header a.active {
+	color: var(--active-header-color);
+	font-weight: bold;
+	border-bottom: solid 2px;
+}
+
+header img {
+	height: 40px;
+}
+
+#main {
+	padding: 72px 16px 16px 16px;
+	background: #fff4;
+}
+
+a {
+	color: var(--link-color);
+	text-decoration: none;
+}
+
+a:hover {
+	color: var(--link-hover-color);
+	text-decoration: underline;
+}
+
+.twitter {
+	padding: 16px 8px;
+	width: 40vw;
+	max-width: 512px;
+	display: flex;
+}
+.twitter iframe {
+	box-shadow: 4px 8px 32px -8px #0008;
+}
+
+
+.simple-list {
+	list-style: none;
+	padding: 16px;
+}
+
+footer, .footer-left, .footer-middle, .footer-right {
+	display: flex;
+}
+
+footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: auto;
+	justify-content: space-between;
+	align-content: space-around;
+	padding: 0px 16px;
+
+	background-color: var(--main-color);
+	text-align: center;
+	color: white;
+}
+.footer-left {
+	flex-flow: row wrap;
+}
+
+.footer-middle {
+	padding: 16px;
+}
+
+.footer-middle img {
+	height: 100px;
+	border-radius: 1000px;
+	box-shadow: 4px 8px 20px 0px #0008;
+}
+
+.footer-right {
+	padding: 16px;
+	flex-flow: column wrap;
+}
+.footer-right div {
+	display: flex;
+	justify-content: center;
+}
+footer a {
+	color: white;
+	text-decoration: none;
+}
+
+footer ul {
+	list-style: none;
+	font-size: small;
+	padding: 16px;
+}
+
+ion-icon {
+	font-size: 24px;
+	margin: 8px;
+}
+
+
+@media screen and (max-width: 600px) {
+	body {
+		margin-bottom: 56px;
+	}
+
+	header {
+		top: auto;
+		bottom: 0;
+		height: 80px;
+		align-content: space-between;
+
+		box-shadow: 0px -1px 8px #0008;/*Para que acabe pronto sin ser muy oscura*/
+		line-height: 16px;
+	}
+	#main {
+		padding: 16px 16px 72px 16px;
+	}
+	.header-left {
+		width: 40%;
+		flex-direction: column;
+		justify-content: flex-start;
+	}
+
+	header img {
+		display: none;
+	}
+
+	.footer-middle {
+		align-self: center;
+	}
+	.footer-middle img {
+	height: 56px;
+}
+}
