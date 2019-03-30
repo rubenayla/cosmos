@@ -1,13 +1,12 @@
-/*Color variables*/
 :root {
 	--main-color: #181c1f;/*#181c1f*/
 	--text-header-color: #ddd;/*#ddd*/
 	--active-header-color: #fff;/*#fff*/
 
-	--link-color: #eef;/*#eef*/
-	--link-hover-color: #bbc;/*#bbc*/
+	--link-color: #248;/*#eef*/
+	--link-hover-color: #248;/*#bbc*/
 
-	--text-color: #fff;
+	--text-color: black;
 
 	/*Light version*/
 	/*--main-color: #fff;
@@ -20,19 +19,19 @@
 	--text-color: #000;*/
 }
 
-/*Custom scrollbar*/
 ::-webkit-scrollbar {
-	width: 8px;
+	width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-	background: var(--main-color);
+	background: #eee;
 }
 
 ::-webkit-scrollbar-thumb {
 	background: #bbb;
 	border-radius: 50px;
-	border-left: solid 2px var(--main-color);
+	border-left: solid 1px #eee;
+	border-right: solid 1px #eee;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -40,14 +39,16 @@
 
 }
 
-html, body {
-	font-family: 'Open Sans', Roboto, Helvetica, Arial, sans-serif;
-	color: var(--text-color);
-	background: url('../images/bg1.jpg') no-repeat center fixed;
+* {
+	box-sizing: border-box;
+}
+html {
+	background: url('../images/bg2.jpg') no-repeat center fixed;
 	background-size: cover;
+}
+html, body {
 	margin: 0;
 }
-
 body {
 	/*min-height 100vh (not 100%. Would be of the html)
 	 to keep the footer down when there isn't content. But 
@@ -60,129 +61,148 @@ body {
 	min-height: 100vh;
 	padding-bottom: 140px;/*Space for the footer*/
 	position: relative;
-}
 
-* {
-	box-sizing: border-box;
+	font-family: 'Open Sans', Roboto, Helvetica, sans-serif;
+	color: var(--text-color);
+	background: #fff4;
 }
 
 header {
 	position: fixed;
-	overflow: visible;
-	background-color: var(--main-color);
 	top: 0;
 	width: 100%;
 	height: 56px;
+	z-index: 10;
+
+	font-size: 15px;
+	line-height: 24px;
+
+	display: flex;
+	overflow: visible;
+	background-color: var(--main-color);
+	box-shadow: 0px 1px 8px 0px #0009;
+}
+header nav, header ul, header li, header a {
+	display: flex;
+}
+header nav {
+	width: 100%;
+	justify-content: space-between;
 	padding: 0px 8px;
-	z-index: 1;
-	box-shadow: 0px 1px 8px 0px #0008;/*Para que acabe pronto sin ser muy oscura*/
 }
 
-.header-left {
-	float: left;
-}
-.header-right {
-	float: right;
+header ul {
+	display: flex;
+	align-items: center;
+	list-style: none;
+	padding: 16px 0;
+	margin: 0;
+	height: 56px;
 }
 
 header a {
-	/* MATERIAL DESIGN. 24 object, 16 padding, 56 total*/
-	float: inherit;
-	font-size: 16px;
-	line-height: 24px;
-	padding: 16px 8px;
+	align-items: center;
+	margin: 0 8px;
 
 	color: var(--text-header-color);
-	text-align: center;
 	text-decoration: none;
 }
 
 header a:hover {
 	color: var(--active-header-color);
+	font-weight: bold;
+	text-decoration: none;
 }
 
 header a.active {
 	color: var(--active-header-color);
 	font-weight: bold;
+	border-bottom: solid 2px;
 }
 
-a {
-	text-decoration: underline;
-	color: var(--link-color);
-}
-
-a:hover {
-	color: var(--link-hover-color);
-}
-
-#logo-header {
-	padding: 8px;
-	border-radius: 1000px;
-}
-
-#logo-header img {
+header img {
 	height: 40px;
-	border-radius: 1000px;
 }
 
 #main {
 	padding: 72px 16px 16px 16px;
+	/*background: #fff4;*/
 }
 
+a {
+	color: var(--link-color);
+	text-decoration: none;
+}
+
+a:hover {
+	color: var(--link-hover-color);
+	text-decoration: underline;
+}
+
+.twitter {
+	padding: 16px 8px;
+	width: 40vw;
+	max-width: 512px;
+	display: flex;
+}
+.twitter iframe {
+	box-shadow: 4px 8px 32px -8px #0008;
+}
+
+
 .simple-list {
-	list-style: none;/*Sin bolitas*/
+	list-style: none;
 	padding: 16px;
+}
+
+footer, .footer-left, .footer-middle, .footer-right {
+	display: flex;
 }
 
 footer {
 	position: absolute;
 	bottom: 0;
-	height: 140px;
-	background-color: var(--main-color);
 	width: 100%;
-	padding: 0px 16px;
-	text-align: center;
-
-	display: flex;
+	height: auto;
 	justify-content: space-between;
-}
+	align-content: space-around;
+	padding: 0px 16px;
 
+	background-color: var(--main-color);
+	text-align: center;
+	color: white;
+}
 .footer-left {
-	float: left;
-	display: inline-block;
+	flex-flow: row wrap;
 }
 
 .footer-middle {
-	display: inline-block;
 	padding: 16px;
 }
 
 .footer-middle img {
-	display: inline-block;
 	height: 100px;
-	border-radius: 50px;/*Half of the height to make it round*/
+	border-radius: 1000px;
 	box-shadow: 4px 8px 20px 0px #0008;
 }
 
 .footer-right {
-	float: right;
-	display: inline-block;
-	padding: 8px;
+	padding: 16px;
+	flex-flow: column wrap;
 }
-
-.footer-right a {
+.footer-right div {
+	display: flex;
+	justify-content: center;
+}
+footer a {
 	color: white;
 	text-decoration: none;
 }
 
 footer ul {
-	list-style: none;/*Sin bolitas*/
+	list-style: none;
 	font-size: small;
 	padding: 16px;
-}
-
-footer ul a {
-	text-decoration: none;
 }
 
 ion-icon {
@@ -190,63 +210,38 @@ ion-icon {
 	margin: 8px;
 }
 
-.twitter {
-	padding: 16px 8px;
-	width: 40vw;
-	max-width: 512px;
-	display: inline-flex;
-}
-.twitter iframe {
-	box-shadow: 8px 16px 32px -8px #0008;
-}
 
+@media screen and (max-width: 600px) {
+	body {
+		margin-bottom: 56px;
+	}
 
-@media screen and (max-width: 600px) { /*500px*/
 	header {
-		/*To the bottom of the screen vertically*/
-		position: fixed;
 		top: auto;
-		bottom: 0%;
-		height: auto;
-
-		padding: 8px;
+		bottom: 0;
+		height: 80px;
+		align-content: space-between;
 
 		box-shadow: 0px -1px 8px #0008;/*Para que acabe pronto sin ser muy oscura*/
-	}
-	
-	.header-left {
-		float: left;
-		width: 50%;
-		display: flex;
-		flex-direction: column;
-	}
-
-	.header-right {
-		float: right;
-		width: 50%;
-		display: flex;
-		flex-direction: column-reverse;
-	}
-
-	header a {
-		display: flex;
-		justify-content: center;
-
-		font-size: x-small;
 		line-height: 16px;
-		padding: 2px 8px;
 	}
-
 	#main {
-		padding: 16px;
+		padding: 16px 16px 72px 16px;
+	}
+	.header-left {
+		width: 40%;
+		flex-direction: column;
+		justify-content: flex-start;
 	}
 
-	footer {
-		margin: 0 0 200px 0;
-	}
-
-	#logo_header {
+	header img {
 		display: none;
 	}
 
+	.footer-middle {
+		align-self: center;
+	}
+	.footer-middle img {
+	height: 56px;
+	}
 }
