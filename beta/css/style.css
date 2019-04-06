@@ -169,18 +169,22 @@ header img {
 	max-width: 800px;
 	max-height: 600px;
 }
-
-
-
-a {
-	color: var(--link-color);
+#m5 {
+	padding: 32px 32px 64px 32px;
+}
+.enroll {
+	padding: 16px;
+	border-radius: 1000px;
+	background: linear-gradient(140deg,#198cff,#00080f);
 	text-decoration: none;
+	color: white;
+	box-shadow: 3px 4px 8px 0px #0008;
+}
+.enroll:hover {
+	color: #eee;
+	box-shadow: inset 3px 4px 8px 0px #0008;
 }
 
-a:hover {
-	color: var(--link-hover-color);
-	text-decoration: underline;
-}
 
 
 
