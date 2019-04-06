@@ -7,17 +7,8 @@
 	--link-hover-color: #248;/*#bbc*/
 
 	--text-color: black;
-
-	/*Light version*/
-	/*--main-color: #fff;
-	--text-header-color: #333;
-	--active-header-color: #000;
-
-	--link-color: #002;
-	--link-hover-color: #559;
-
-	--text-color: #000;*/
 }
+
 
 ::-webkit-scrollbar {
 	width: 10px;
@@ -42,10 +33,6 @@
 * {
 	box-sizing: border-box;
 }
-html {
-	background: url('../images/bg2.jpg') no-repeat center fixed;
-	background-size: cover;
-}
 html, body {
 	margin: 0;
 }
@@ -62,7 +49,7 @@ body {
 	padding-bottom: 140px;/*Space for the footer*/
 	position: relative;
 
-	background: #fff4;
+	background: #fff;
 	font-family: 'Open Sans', Roboto, Helvetica, sans-serif;
 	color: var(--text-color);
 }
@@ -79,8 +66,8 @@ header {
 
 	display: flex;
 	overflow: visible;
-	background: var(--main-color);
-	box-shadow: 0px 1px 8px 0px #0009;
+	background: #111b;
+	box-shadow: 0px 1px 8px 0px #0008;
 }
 header nav, header ul, header li, header a {
 	display: flex;
@@ -102,7 +89,7 @@ header ul {
 
 header a {
 	align-items: center;
-	margin: 0 8px;
+	margin: 0 8px;/*Not padding because of the border-bottom*/
 
 	color: var(--text-header-color);
 	text-decoration: none;
@@ -124,8 +111,64 @@ header img {
 	height: 40px;
 }
 
-#main {
+
+
+.m {
+	display: flex;
+	justify-content: center;
+}
+.m h1, .m p {
+	text-align: center;
+}
+#m1 {
 	padding: 72px 16px 16px 16px;
+	flex-flow: column;
+	align-content: center;
+	justify-content: center;
+	height: 400px;
+
+	background: url('../images/bg1.jpg') no-repeat center fixed;
+	background-size: cover;
+	color: white;
+	text-shadow: 1px 1px 2px black;
+}
+#m1 h1 {
+	margin-bottom: 8px;
+}
+
+#m2 {
+	padding: 0;
+	background: url('../images/bg1.jpg') no-repeat center fixed;
+	background-size: cover;
+	height: 256px;
+	display: flex;
+	justify-content: space-around;
+}
+#im1 {
+	width: 50%;
+	background: url("../images/bg7.jpg") no-repeat center;
+	background-size: cover;
+}
+#im2 {
+	width: 50%;
+	background: url("../images/bg10.jpg") no-repeat center;
+	background-size: cover;
+
+}
+#m3 {
+	padding: 32px 16px;
+	background: white;
+	justify-content: space-around;
+}
+.twitter * {
+	box-shadow: 2px 4px 8px 0px #0004;
+	border-radius: 4px;
+	max-width: 600px;
+	max-height: 600px;
+}
+#m4 {
+	padding: 32px 16px;
+	background: white;
 }
 
 a {
@@ -138,15 +181,6 @@ a:hover {
 	text-decoration: underline;
 }
 
-.twitter {
-	padding: 16px 8px;
-	width: 50%;
-	max-width: 512px;
-	display: flex;
-}
-.twitter iframe {
-	box-shadow: 4px 8px 32px -8px #0008;
-}
 
 
 .simple-list {
@@ -241,6 +275,6 @@ ion-icon {
 		align-self: center;
 	}
 	.footer-middle img {
-	height: 56px;
+		height: 56px;
 	}
 }
