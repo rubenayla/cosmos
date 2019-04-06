@@ -133,6 +133,15 @@ header img {
 	max-width: 1000px;
 	margin: 16px auto;
 }
+#m1 a {
+	color: #51b0ff;
+	text-decoration: none;
+	text-shadow: 1px 1px 2px #000;
+}
+#m1 a:hover {
+	text-decoration: underline;
+	color: #3b82bf;
+}
 
 #m2 {
 	padding: 0;
