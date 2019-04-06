@@ -116,7 +116,7 @@ header img {
 	display: flex;
 	justify-content: center;
 }
-.m h1, .m p {
+.m h1, .m h2, .m h3, .m h4, .m h5, .m p {
 	text-align: center;
 }
 #m1 {
