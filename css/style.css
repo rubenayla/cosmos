@@ -209,17 +209,9 @@ header img {
 	background: white;
 	justify-content: center;
 }
-#m3 ul {
+#m3 div {
 	display: flex;
-	flex-flow: column wrap;
-	background: red;
 	justify-content: center;
-	width: 30px;
-}
-#m3 ul li {
-	display: flex;
-	flex-flow: column wrap;
-	width: 20px;
 }
 #m4 {
 	padding: 32px 16px;
