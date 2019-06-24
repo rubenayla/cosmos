@@ -64,7 +64,7 @@ header {
 
 	display: flex;
 	overflow: visible;
-	background: var(--bkg-color);
+	background: #0a0a0ac0;
 	box-shadow: 0px 1px 8px 0px #0008;
 }
 header nav, header ul, header li, header a {
@@ -95,11 +95,11 @@ header a {
 header a:hover {
 	color: #fff;
 	border: solid 4px transparent;
-	border-bottom: solid 4px var(--text-header-color);
+	border-bottom: solid 4px #eee;
 }
 .active {
-	color: #fff;
-	/*border: solid 4px transparent;*/
+	/*color: #fff;*/
+	
 }
 header img {
 	height: 40px;
