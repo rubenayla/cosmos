@@ -94,7 +94,6 @@ header a {
 }
 header a:hover {
 	color: #fff;
-	border: solid 4px transparent;
 	border-bottom: solid 4px #eee;
 }
 .active {
@@ -106,21 +105,32 @@ header img {
 	height: 40px;
 	width: 40px;
 }
-#header-icon {
-	/*Remove the standard border at the bottom*/
+/****COSMOS LOGO****/
+#icon {
+	/*Remove the border at the bottom to this <a> element*/
 	border: none;
 	padding-right: 8px;
 }
-#header-icon-image {
+#icon-image {
 	/*Leave place for the border of the image*/
 	border: solid 2px transparent;
 	border-radius: 999px;
 	transition: border .1s ease-out;
 }
-#header-icon:hover #header-icon-image{
+#active-icon-image {
+	border: solid 2px #cccc;
+	border-radius: 999px;
+	transition: border .1s ease-out;
+}
+#icon:hover #icon-image{
 	border: solid 2px white;
 	border-radius: 999px;
 }
+#icon:hover #active-icon-image{
+	border: solid 2px white;
+	border-radius: 999px;
+}
+
 
 
 .dropdown {
