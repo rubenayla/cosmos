@@ -72,6 +72,7 @@ header nav, header ul, header li, header a {
 }
 header nav {
 	width: 100%;
+	display: flex;
 	justify-content: space-between;
 	flex-flow: row wrap;
 	padding: 0px 8px;
@@ -85,7 +86,6 @@ header ul {
 	height: 56px;
 }
 header a {
-	align-items: center;
 	padding: 12px 4px;
 	color: var(--text-header-color);
 	text-decoration: none;
