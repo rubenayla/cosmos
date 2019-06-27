@@ -98,7 +98,6 @@ header a:hover {
 }
 .active {
 	/*color: #fff;*/
-	border: solid 4px transparent;
 	border-bottom: solid 4px #cccc;
 }
 header img {
