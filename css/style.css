@@ -184,12 +184,12 @@ header img {
 }
 
 #m2 {
+	display: flex;
+	justify-content: space-around;
 	padding: 0;
 	background: url('../images/bg1.jpg') no-repeat center fixed;
 	background-size: cover;
 	height: 256px;
-	display: flex;
-	justify-content: space-around;
 }
 #im1 {
 	width: 50%;
