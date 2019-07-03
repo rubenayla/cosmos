@@ -71,22 +71,12 @@
 			</ul>
 		</nav>
 	</header>
-	<div class="m" id="m3"></div>
-
-	<!-- LOGIN -->
-	<div id="main-div">
-		<h3>Log In</h3>
-		<input type="email" placeholder="example@gmail.com" id="email-input">
-		<input type="password" placeholder="Password..." id="pass-input">
-
-		<button onclick="login()">Login</button>
+	<div id="m1" class="m"></div>
+	<div id="m3" class="m">
+		<pre id="object">
+			
+		</pre>
 	</div>
-
-	<div id="loggedin-div" style="display: none;">
-		<h3 id="user-welcome">Welcome user</h3>
-		<button onclick="logout()">Logout</button>
-	</div>
-
 	<footer>
 		<div class="footer-left">
 			<ul style="display: inline-block; float: left;">
@@ -117,21 +107,7 @@
 		</div>
 	</footer>
 	<script type="text/javascript" src="https://unpkg.com/ionicons@4.4.4/dist/ionicons.js"></script>
-	<!-- Firebase -->
 	<script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
-	<script type="text/javascript">
-		// Initialize Firebase
-		const firebaseConfig = {
-			apiKey: "AIzaSyBCJRWfOUYPxd1367IUla1JH5BiIEleUe8",
-			authDomain: "cosmos-urjc.firebaseapp.com",
-			databaseURL: "https://cosmos-urjc.firebaseio.com",
-			projectId: "cosmos-urjc",
-			storageBucket: "cosmos-urjc.appspot.com",
-			messagingSenderId: "454555846199",
-			appId: "1:454555846199:web:e5f7e0e14450b7b5"
-		};
-		firebase.initializeApp(firebaseConfig);
-	</script>
-	<script type="text/javascript" src="login.js"></script>
+	<script type="text/javascript" src="login2.js"></script>
 </body>
 </html>
