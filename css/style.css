@@ -51,7 +51,15 @@ body {
 	font-family: 'Open Sans', Roboto, Helvetica, sans-serif;
 	color: var(--text-color);
 }
-
+a {
+	color: #51b0ff;
+	text-decoration: none;
+	text-shadow: 1px 1px 2px #000;
+}
+a:hover {
+	color: #3b82bf;
+	text-decoration: underline;
+}
 header {
 	position: fixed;
 	top: 0;
@@ -93,8 +101,12 @@ header a {
 	transition: border .1s ease-out;
 }
 header a:hover {
+	padding: 12px 4px;
 	color: #fff;
+	text-decoration: none;
+	border: solid 4px transparent;
 	border-bottom: solid 4px #eee;
+	transition: border .1s ease-out;
 }
 .active {
 	/*color: #fff;*/
@@ -130,8 +142,6 @@ header img {
 	border-radius: 999px;
 }
 
-
-
 .dropdown {
 	padding: 16px 0;
 	display: none;
@@ -152,15 +162,17 @@ header img {
 }
 
 
+
+
 .m {
 	display: flex;
 	justify-content: center;
 }
-.m h1, .m h2, .m h3, .m h4, .m h5, .m p {
-	text-align: center;
-}
-#m1 {
-	padding: 80px 16px 50px 16px;
+.dark-section {
+	display: flex;
+	justify-content: center;
+
+	padding: 24px 16px 50px 16px;
 	flex-flow: column;
 
 	background: url('../images/bg1.jpg') no-repeat center fixed;
@@ -168,19 +180,18 @@ header img {
 	color: white;
 	text-shadow: 1px 1px 2px black;
 }
-#m1 p {
+.dark-section h1, .dark-section h2, 
+.dark-section h3, .dark-section h4, 
+.dark-section h5, .dark-section p {
+	text-align: center;
+}
+.dark-section p {
 	width: 90%;
 	max-width: 1000px;
 	margin: 16px auto;
 }
-#m1 a {
-	color: #51b0ff;
-	text-decoration: none;
-	text-shadow: 1px 1px 2px #000;
-}
-#m1 a:hover {
-	text-decoration: underline;
-	color: #3b82bf;
+.first-section {
+	padding: 80px 16px 50px 16px !important;
 }
 
 #m2 {
@@ -202,16 +213,20 @@ header img {
 	background-size: cover;
 
 }
-#m3 {
+
+.section {
+	display: flex;
 	padding: 32px 16px;
 	flex-flow: column wrap;
 	background: white;
 	justify-content: center;
 }
-#m3 div {
+.section h1, .section div {
 	display: flex;
 	justify-content: center;
 }
+
+
 #m4 {
 	padding: 32px 16px;
 	background: white;
