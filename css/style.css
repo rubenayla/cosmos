@@ -52,12 +52,12 @@ body {
 	color: var(--text-color);
 }
 a {
-	color: #51b0ff;
+	color: #40b0ff;
 	text-decoration: none;
-	text-shadow: 1px 1px 2px #000;
+	font-weight: bold;
 }
 a:hover {
-	color: #3b82bf;
+	color: #50b0ff;
 	text-decoration: underline;
 }
 header {
@@ -97,6 +97,7 @@ header a {
 	padding: 12px 4px;
 	color: var(--text-header-color);
 	text-decoration: none;
+	font-weight: normal;
 	border: solid 4px transparent;
 	transition: border .1s ease-out;
 }
@@ -104,6 +105,7 @@ header a:hover {
 	padding: 12px 4px;
 	color: #fff;
 	text-decoration: none;
+	font-weight: normal;
 	border: solid 4px transparent;
 	border-bottom: solid 4px #eee;
 	transition: border .1s ease-out;
@@ -289,8 +291,12 @@ footer {
 footer a {
 	color: white;
 	text-decoration: none;
+	font-weight: normal;
 }
-
+footer a:hover {
+	text-decoration: none;
+	font-weight: normal;
+}
 footer ul {
 	list-style: none;
 	font-size: small;
