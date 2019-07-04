@@ -33,6 +33,20 @@ function login(){
 
 }
 
+function register(){
+
+	var email = document.getElementById("email-input").value;
+	var pass = document.getElementById("pass-input").value;
+
+	firebase.auth().createUserWithEmailAndPassword(email, pass).catch(function(error) {
+	  // Handle Errors here.
+	  var errorCode = error.code;
+	  var errorMessage = error.message;
+	  
+	  alert("Error: " + errorMessage);
+	});
+}
+
 function logout(){
 	firebase.auth().signOut();
 }
