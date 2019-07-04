@@ -163,11 +163,6 @@ header img {
 
 
 
-
-.m {
-	display: flex;
-	justify-content: center;
-}
 .dark-section {
 	display: flex;
 	justify-content: center;
@@ -216,20 +211,16 @@ header img {
 
 .section {
 	display: flex;
+	justify-content: center;
+
 	padding: 32px 16px;
 	flex-flow: column wrap;
+
 	background: white;
-	justify-content: center;
 }
 .section h1, .section div {
 	display: flex;
 	justify-content: center;
-}
-
-
-#m4 {
-	padding: 32px 16px;
-	background: white;
 }
 .twitter * {
 	box-shadow: 2px 4px 8px 0px #0004;
@@ -237,10 +228,7 @@ header img {
 	max-width: 800px;
 	max-height: 600px;
 }
-#m5 {
-	padding: 32px 32px 64px 32px;
-}
-.enroll {
+#enroll-button {
 	padding: 16px;
 	border-radius: 1000px;
 	background: linear-gradient(140deg,#198cff,#00080f);
@@ -248,30 +236,23 @@ header img {
 	color: white;
 	box-shadow: 3px 4px 8px 0px #0008;
 }
-.enroll:hover {
+#enroll-button:hover {
 	color: #eee;
 	box-shadow: inset 3px 4px 8px 0px #0008;
 }
 
-
-
-
-.simple-list {
-	list-style: none;
-	padding: 16px;
-}
 
 footer, .footer-left, .footer-middle, .footer-right {
 	display: flex;
 }
 
 footer {
-	position: absolute;
+	position: absolute;  /*Inside the body, with position relative*/
 	bottom: 0;
 	width: 100%;
 	height: auto;
 	justify-content: space-between;
-	align-content: space-around;
+	align-items: center;
 	padding: 0px 16px;
 
 	background-color: var(--bkg-color);
@@ -279,16 +260,21 @@ footer {
 	color: white;
 }
 .footer-left {
+	display: flex;
 	flex-flow: row wrap;
 }
 
 .footer-middle {
 	padding: 16px;
 }
-
+.footer-middle a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 .footer-middle img {
-	height: 100px;
-	border-radius: 1000px;
+	height: 80px;
+	border-radius: 999px;
 	box-shadow: 4px 8px 20px 0px #0008;
 }
 
@@ -310,7 +296,9 @@ footer ul {
 	font-size: small;
 	padding: 16px;
 }
-
+#follow-us {
+	margin: 8px;
+}
 ion-icon {
 	font-size: 24px;
 	margin: 8px;
@@ -326,7 +314,7 @@ ion-icon {
 		top: auto;
 		bottom: 0;
 		height: 80px;
-		align-content: space-between;
+		align-items: space-between;
 
 		box-shadow: 0px -1px 8px #0008;/*Para que acabe pronto sin ser muy oscura*/
 		line-height: 16px;
