@@ -44,7 +44,7 @@ body {
 	 parent element that hasn't static positioning, so the 
 	 body has relative position.*/
 	min-height: 100vh;
-	padding-bottom: 121px;/*Space for the footer*/
+	padding-bottom: 120px;/*Space for the footer*/
 	position: relative;
 
 	background: #fff;
@@ -196,7 +196,15 @@ header img {
 	justify-content: space-around;
 	height: 256px;
 }
-
+.entities {
+	display: flex;
+	justify-content: space-around;
+	flex-flow: row wrap;
+}
+.entities img {
+	padding: 16px;
+	
+}
 .section {
 	display: flex;
 	justify-content: center;
@@ -206,7 +214,7 @@ header img {
 
 	background: white;
 }
-.section h1, .section div {
+.section h1, h2, .section div {
 	display: flex;
 	justify-content: center;
 }
