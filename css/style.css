@@ -238,22 +238,27 @@ footer {
 	position: absolute;  /*Inside the body, with position relative*/
 	bottom: 0;
 	width: 100%;
-	height: auto;
-	justify-content: space-between;
-	align-items: center;
+	min-height: 120px;
 	padding: 0px 16px;
+	overflow: hidden;
 
 	background-color: var(--bkg-color);
 	text-align: center;
 	color: white;
 }
 .footer-left {
+	float: left;
+	width: 45%;
 	display: flex;
 	flex-flow: row wrap;
 }
 
 .footer-middle {
+	position: absolute;
 	padding: 16px;
+	left: 50%;
+	transform: translate(-56px, 0);
+	height: 100%;
 }
 .footer-middle a {
 	display: flex;
@@ -267,7 +272,11 @@ footer {
 }
 
 .footer-right {
+	position: absolute;
+	right: 10px;
 	padding: 16px;
+
+	display: flex;
 	flex-flow: column wrap;
 }
 .footer-right div {
@@ -289,7 +298,7 @@ footer ul {
 	padding: 16px;
 }
 #follow-us {
-	margin: 8px;
+	padding: 8px;
 }
 ion-icon {
 	font-size: 24px;
@@ -298,36 +307,5 @@ ion-icon {
 
 
 @media screen and (max-width: 600px) {
-	body {
-		margin-bottom: 56px;
-	}
-
-	header {
-		top: auto;
-		bottom: 0;
-		height: 80px;
-		align-items: space-between;
-
-		box-shadow: 0px -1px 8px #0008;/*Para que acabe pronto sin ser muy oscura*/
-		line-height: 16px;
-	}
-	#main {
-		padding: 16px 16px 72px 16px;
-	}
-	.header-left {
-		width: 40%;
-		flex-direction: column;
-		justify-content: flex-start;
-	}
-
-	header img {
-		display: none;
-	}
-
-	.footer-middle {
-		align-self: center;
-	}
-	.footer-middle img {
-		height: 56px;
-	}
+	
 }
