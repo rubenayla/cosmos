@@ -44,7 +44,7 @@ body {
 	 parent element that hasn't static positioning, so the 
 	 body has relative position.*/
 	min-height: 100vh;
-	padding-bottom: 140px;/*Space for the footer*/
+	padding-bottom: 121px;/*Space for the footer*/
 	position: relative;
 
 	background: #fff;
@@ -52,12 +52,12 @@ body {
 	color: var(--text-color);
 }
 a {
-	color: #40b0ff;
+	color: #3ae;
 	text-decoration: none;
 	font-weight: bold;
 }
 a:hover {
-	color: #50b0ff;
+	color: #29e;
 	text-decoration: underline;
 }
 header {
@@ -191,24 +191,10 @@ header img {
 	padding: 80px 16px 50px 16px !important;
 }
 
-#m2 {
+.image-section {
 	display: flex;
 	justify-content: space-around;
-	padding: 0;
-	background: url('../images/bg1.jpg') no-repeat center fixed;
-	background-size: cover;
 	height: 256px;
-}
-#im1 {
-	width: 50%;
-	background: url("../images/im1.jpg") no-repeat center;
-	background-size: cover;
-}
-#im2 {
-	width: 50%;
-	background: url("../images/im2.jpg") no-repeat center;
-	background-size: cover;
-
 }
 
 .section {
