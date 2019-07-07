@@ -24,11 +24,11 @@ function login(){
 	var pass = document.getElementById("pass-input").value;
 
 	firebase.auth().signInWithEmailAndPassword(email, pass).catch(function(error) {
-	  // Handle Errors here.
-	  var errorCode = error.code;
-	  var errorMessage = error.message;
+		// Handle Errors here.
+		var errorCode = error.code;
+		var errorMessage = error.message;
 
-	  alert("Error: " + errorMessage);
+		alert("Error: " + errorMessage);
 	});
 
 }
@@ -39,11 +39,11 @@ function register(){
 	var pass = document.getElementById("pass-input").value;
 
 	firebase.auth().createUserWithEmailAndPassword(email, pass).catch(function(error) {
-	  // Handle Errors here.
-	  var errorCode = error.code;
-	  var errorMessage = error.message;
-	  
-	  alert("Error: " + errorMessage);
+		// Handle Errors here.
+		var errorCode = error.code;
+		var errorMessage = error.message;
+		
+		alert("Error: " + errorMessage);
 	});
 }
 
@@ -55,33 +55,31 @@ function google_login(){
 	var provider = new firebase.auth.GoogleAuthProvider();
 
 	firebase.auth().signInWithPopup(provider).then(function(result) {
-	  // This gives you a Google Access Token. You can use it to access the Google API.
-	  var token = result.credential.accessToken;
-	  // The signed-in user info.
-	  var user = result.user;
-	  // ...
+		// This gives you a Google Access Token. You can use it to access the Google API.
+		var token = result.credential.accessToken;
+		// The signed-in user info.
+		var user = result.user;
+		// ...
 	}).catch(function(error) {
-	  // Handle Errors here.
-	  var errorCode = error.code;
-	  var errorMessage = error.message;
-	  // The email of the user's account used.
-	  var email = error.email;
-	  // The firebase.auth.AuthCredential type that was used.
-	  var credential = error.credential;
-	  // ...
+		// Handle Errors here.
+		var errorCode = error.code;
+		var errorMessage = error.message;
+		// The email of the user's account used.
+		var email = error.email;
+		// The firebase.auth.AuthCredential type that was used.
+		var credential = error.credential;
+		// ...
 	});
 }
 
 function forgotten(){
 
 	var email = document.getElementById("email-input").value;
-
 	var auth = firebase.auth();
-	var emailAddress = "user@example.com";
 
-	auth.sendPasswordResetEmail(emailAddress).then(function() {
-	  // Email sent.
+	auth.sendPasswordResetEmail(email).then(function() {
+		alert("Email sent");
 	}).catch(function(error) {
-	  // An error happened.
+		alert(error);
 	});
 }
