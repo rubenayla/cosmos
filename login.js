@@ -72,7 +72,7 @@ function google_login(){
 	});
 }
 
-function google_login(){
+function twitter_login(){
 	var provider = new firebase.auth.TwitterAuthProvider();
 
 	firebase.auth().signInWithPopup(provider).then(function(result) {
@@ -90,6 +90,7 @@ function google_login(){
 		// The firebase.auth.AuthCredential type that was used.
 		var credential = error.credential;
 		// ...
+		alert(error);
 	});
 }
 
