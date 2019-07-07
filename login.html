@@ -77,25 +77,37 @@
 	<div class="first-section" id="log-div">
 
 		<div id="login-div">
-			<h2>INICIAR SESIÓN</h2>
+			<h2>Iniciar Sesión</h2>
 			<div id="social-btn-div">
 				<button onclick="google_login()" id="google-btn">
 					<ion-icon name="logo-google"></ion-icon>
 					Iniciar sesión con Google
 				</button>
-				<button onclick="twitter_login()" id="twitter-btn">
+				<!-- <button onclick="twitter_login()" id="twitter-btn">
 					<ion-icon name="logo-twitter"></ion-icon>
 					Iniciar sesión con Twitter
-				</button>
+				</button> -->
 			</div>
-			<div>
-				<input type="email" placeholder="ejemplo@gmail.com" id="email-input">
-				<input type="password" placeholder="Contraseña..." id="pwd-input">
-			</div>
-			<div>
-				<button onclick="login()" id="login-btn">Iniciar sesión</button>
-				<button onclick="register()" id="register-btn">Registrar</button>
-				<button onclick="forgotten()" id="forgotten-btn">He olvidado mi contraseña</button>
+			<div class="separator"></div>
+			<div id="manual-log-div">
+				<div id="inputs">
+					<div class="input-group">
+						<ion-icon name="mail"></ion-icon>
+						<input type="email" placeholder="ejemplo@gmail.com" id="email-input">
+					</div>
+					<div class="input-group">
+						<ion-icon name="lock"></ion-icon>
+						<input type="password" placeholder="contraseña..." id="pwd-input">
+					</div>
+				</div>
+				<div id="btns">
+					<button onclick="login()" id="login-btn">Iniciar Sesión</button>
+					<button onclick="register()" id="register-btn">Registrar</button>
+					<button onclick="forgotten()" id="forgotten-btn">He olvidado mi contraseña</button>
+					
+					
+					
+				</div>
 			</div>
 		</div>
 

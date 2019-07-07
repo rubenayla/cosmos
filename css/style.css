@@ -278,7 +278,7 @@ header img {
 	background: #d42420;
 	color: white;
 }
-#twitter-btn {
+/*#twitter-btn {
 	color: #0088bb;
 	background: transparent;
 	border: 1px solid #0088bb;
@@ -293,16 +293,74 @@ header img {
 #twitter-btn:hover {
 	background: #0088bb;
 	color: white;
+}*/
+.separator {
+	margin: 16px 0;
+	height: 0;
+	border-top: 1px solid #ccc;
+}
+#manual-log-div {
+	display: flex;
+	flex-flow: column;
+
+}
+#inputs {
+	margin-bottom: 8px;
+}
+.input-group {
+	display: flex;
+	justify-content: center;
+	padding: 8px;
 }
 #email-input, #pwd-input {
-
-
-	
+	background: white;
+	padding: 8px;
+	margin-left: 8px;
+	border: none;
+	box-shadow: inset 0 0 4px 0 #0004;
+	border-radius: 6px;
+}
+#btns {
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	padding: 8px;
 }
 #login-btn, #register-btn, #forgotten-btn {
-
+	background: transparent;
+	border-radius: 6px;
+	padding: 12px;
+	margin: 2px;
+	transition: color .1s, background .1s;
+	
 }
-
+#login-btn {
+	color: #d42420;
+	border: 1px solid #d42420;
+	
+}
+#register-btn {
+	color: #0088bb;
+	border: 1px solid #0088bb;
+	
+}
+#forgotten-btn {
+	color: #683838;
+	border: 1px solid #683838;
+	
+}
+#login-btn:hover {
+	color: white;
+	background: #d42420;
+}
+#register-btn:hover {
+	color: white;
+	background: #0088bb;
+}
+#forgotten-btn:hover {
+	color: white;
+	background: #683838;
+}
 
 
 footer {
