@@ -16,7 +16,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 
 
 
-			document.getElementById("user-welcome").innerHTML = "Welcome " + email;
+			document.getElementById("user-welcome").innerHTML = "Bienvenido " + email;
 			document.getElementById("user-info").innerHTML = "Name: " + name
 			+ "<br>" + "<img src=\"" + photoURL + "\">";
 
