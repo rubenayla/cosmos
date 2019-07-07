@@ -7,9 +7,17 @@ firebase.auth().onAuthStateChanged(function(user) {
 		// Get user data to show
 		var user = firebase.auth().currentUser;
 		if (user != null){
+			var name = user.displayName;
 			var email = user.email;
-			document.getElementById("user-welcome").innerHTML = "Welcome " + email;
+			var photoUrl= user.photoUrl;
+			var emailVerified= user.emailVerified;
+			var uid= user.uid;
 
+
+
+			document.getElementById("user-welcome").innerHTML = "Welcome " + email;
+			document.getElementById("user-info").innerHTML =
+			"Name: " + name;
 		}
 	} else {
 		// No user is signed in.
