@@ -9,15 +9,17 @@ firebase.auth().onAuthStateChanged(function(user) {
 		if (user != null){
 			var name = user.displayName;
 			var email = user.email;
-			var photoUrl= user.photoUrl;
+			var photoURL= user.photoURL;
+			var description = user.description;
 			var emailVerified= user.emailVerified;
 			var uid= user.uid;
 
 
 
 			document.getElementById("user-welcome").innerHTML = "Welcome " + email;
-			document.getElementById("user-info").innerHTML =
-			"Name: " + name;
+			document.getElementById("user-info").innerHTML = "Name: " + name
+			+ "<br>" + "<img src=\"" + photoURL + "\">";
+
 		}
 	} else {
 		// No user is signed in.
@@ -81,27 +83,27 @@ function google_login(){
 	});
 }
 
-function twitter_login(){
-	var provider = new firebase.auth.TwitterAuthProvider();
+// function twitter_login(){
+// 	var provider = new firebase.auth.TwitterAuthProvider();
 
-	firebase.auth().signInWithPopup(provider).then(function(result) {
-		// This gives you a Google Access Token. You can use it to access the Google API.
-		var token = result.credential.accessToken;
-		// The signed-in user info.
-		var user = result.user;
-		// ...
-	}).catch(function(error) {
-		// Handle Errors here.
-		var errorCode = error.code;
-		var errorMessage = error.message;
-		// The email of the user's account used.
-		var email = error.email;
-		// The firebase.auth.AuthCredential type that was used.
-		var credential = error.credential;
-		// ...
-		alert(error);
-	});
-}
+// 	firebase.auth().signInWithPopup(provider).then(function(result) {
+// 		// This gives you a Google Access Token. You can use it to access the Google API.
+// 		var token = result.credential.accessToken;
+// 		// The signed-in user info.
+// 		var user = result.user;
+// 		// ...
+// 	}).catch(function(error) {
+// 		// Handle Errors here.
+// 		var errorCode = error.code;
+// 		var errorMessage = error.message;
+// 		// The email of the user's account used.
+// 		var email = error.email;
+// 		// The firebase.auth.AuthCredential type that was used.
+// 		var credential = error.credential;
+// 		// ...
+// 		alert(error);
+// 	});
+// }
 
 function forgotten(){
 
@@ -112,5 +114,21 @@ function forgotten(){
 		alert("Email sent");
 	}).catch(function(error) {
 		alert(error);
+	});
+}
+
+function update(){
+
+	var user = firebase.auth().currentUser;
+
+	user.updateProfile({
+		displayName: document.getElementById("name-input").value,
+		photoURL: document.getElementById("photourl-input").value
+	}).then(function() {
+		// Update successful.
+		// alert("Update successful");
+	}).catch(function(error) {
+		// An error happened.
+		// alert(error);
 	});
 }
