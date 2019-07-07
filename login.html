@@ -74,22 +74,37 @@
 	<div class="m" id="m3"></div>
 
 	<!-- LOGIN -->
-	<div id="main-div">
-		<h3>Log In</h3>
-		<button onclick="google_login()">Iniciar sesión o Registrar con Google</button>
-		<br>
-		<input type="email" placeholder="ejemplo@gmail.com" id="email-input">
-		<input type="password" placeholder="Contraseña..." id="pass-input">
-		<button onclick="login()">Iniciar sesión</button>
-		<button onclick="register()">Registrar</button>
-		<button onclick="forgotten()">He olvidado mi contraseña</button>
-	</div>
+	<div class="first-section" id="log-div">
 
-	<div id="loggedin-div" style="display: none;">
-		<h3 id="user-welcome">Welcome user</h3>
-		<button onclick="logout()">Logout</button>
-	</div>
+		<div id="login-div">
+			<h2>INICIAR SESIÓN</h2>
+			<div id="social-btn-div">
+				<button onclick="google_login()" id="google-btn">
+					<ion-icon name="logo-google"></ion-icon>
+					Iniciar sesión con Google
+				</button>
+				<button onclick="google_login()" id="twitter-btn">
+					<ion-icon name="logo-twitter"></ion-icon>
+					Iniciar sesión con Twitter
+				</button>
+			</div>
+			<div>
+				<input type="email" placeholder="ejemplo@gmail.com" id="email-input">
+				<input type="password" placeholder="Contraseña..." id="pwd-input">
+			</div>
+			<div>
+				<button onclick="login()" id="login-btn">Iniciar sesión</button>
+				<button onclick="register()" id="register-btn">Registrar</button>
+				<button onclick="forgotten()" id="forgotten-btn">He olvidado mi contraseña</button>
+			</div>
+		</div>
 
+		<div id="logout-div" style="display: none;">
+			<h3 id="user-welcome">Welcome user</h3>
+			<button onclick="logout()">Logout</button>
+		</div>
+
+	</div>
 	<footer>
 		<div class="footer-left">
 			<ul style="display: inline-block; float: left;">

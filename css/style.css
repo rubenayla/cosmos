@@ -62,6 +62,7 @@ a:hover {
 }
 header {
 	position: fixed;
+	display: flex;
 	top: 0;
 	width: 100%;
 	height: 56px;
@@ -70,18 +71,15 @@ header {
 	font-size: 16px;
 	line-height: 24px;
 
-	display: flex;
 	overflow: visible;
 	background: #080808c0;
 	box-shadow: 0px 1px 8px 0px #0008;
 }
-header nav, header ul, header li, header a {
-	display: flex;
-}
 header nav {
-	width: 100%;
 	display: flex;
+	width: 100%;
 	justify-content: space-between;
+	align-items: center;
 	flex-flow: row wrap;
 	padding: 0px 8px;
 }
@@ -94,6 +92,7 @@ header ul {
 	height: 56px;
 }
 header a {
+	display: flex;
 	padding: 12px 4px;
 	color: var(--text-header-color);
 	text-decoration: none;
@@ -236,6 +235,75 @@ header img {
 	color: #eee;
 	box-shadow: inset 3px 4px 8px 0px #0008;
 }
+
+
+
+
+#log-div {
+	display: flex;
+	justify-content: center;
+}
+#login-div {
+	width: 40%;
+	padding: 32px;
+	background: #f4f6f8;
+	box-shadow: 2px 2px 8px 0px #0008;
+	border-radius: 8px;
+	display: flex;
+	justify-content: center;
+
+}
+#login-div h2 {
+	margin: 0 0 16px;
+}
+#social-btn-div {
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+}
+#google-btn {
+	color: #e60600;
+	background: transparent;
+	border: 1px solid #e60600;
+	border-radius: 6px;
+	transition: color .1s, background .1s;
+	padding: 8px;
+	margin: 2px;
+
+	display: flex;
+	align-items: center;
+
+}
+#google-btn:hover {
+	background: #d42420;
+	color: white;
+}
+#twitter-btn {
+	color: #0088bb;
+	background: transparent;
+	border: 1px solid #0088bb;
+	border-radius: 6px;
+	transition: color .1s, background .1s;
+	padding: 8px;
+	margin: 2px;
+
+	display: flex;
+	align-items: center;
+}
+#twitter-btn:hover {
+	background: #0088bb;
+	color: white;
+}
+#email-input, #pwd-input {
+
+
+	
+}
+#login-btn, #register-btn, #forgotten-btn {
+
+}
+
+
 
 footer {
 	display: flex;
