@@ -132,3 +132,14 @@ function update(){
 		// alert(error);
 	});
 }
+
+function delete_account() {
+	var user = firebase.auth().currentUser;
+
+	user.delete().then(function() {
+		// User deleted.
+	}).catch(function(error) {
+		// An error happened.
+		alert(error);
+	});
+}
