@@ -261,12 +261,10 @@ footer {
 .footer-right {
 	display: flex;
 	width: 50%;
-	height: 100%;
 	padding: 16px 20px 16px 16px;
 	flex-flow: row-reverse wrap;
-	justify-content: flex-start;
 }
-.follow-us-div {
+#follow-us-div {
 	display: flex;
 	flex-flow: column wrap;
 }
