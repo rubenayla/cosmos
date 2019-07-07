@@ -122,7 +122,7 @@ header img {
 #icon {
 	/*Remove the border at the bottom to this <a> element*/
 	border: none;
-	padding-right: 8px;
+	padding: 8px 8px 8px 4px;
 }
 #icon-image {
 	/*Leave place for the border of the image*/
@@ -203,7 +203,7 @@ header img {
 }
 .entities img {
 	padding: 16px;
-	
+
 }
 .section {
 	display: flex;
@@ -237,12 +237,8 @@ header img {
 	box-shadow: inset 3px 4px 8px 0px #0008;
 }
 
-
-footer, .footer-left, .footer-middle, .footer-right {
-	display: flex;
-}
-
 footer {
+	display: flex;
 	position: absolute;  /*Inside the body, with position relative*/
 	bottom: 0;
 	width: 100%;
@@ -255,42 +251,39 @@ footer {
 	color: white;
 }
 .footer-left {
-	float: left;
-	width: 45%;
+	display: flex;
+	width: 50%;
 	display: flex;
 	flex-flow: row wrap;
 }
-
-.footer-middle {
-	position: absolute;
-	padding: 16px;
-	left: 50%;
-	transform: translate(-56px, 0);
-	height: 100%;
-}
-.footer-middle a {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-.footer-middle img {
-	height: 80px;
-	border-radius: 999px;
-	box-shadow: 4px 8px 20px 0px #0008;
-}
-
 .footer-right {
-	position: absolute;
-	right: 10px;
-	padding: 16px;
-
 	display: flex;
+	width: 50%;
+	padding: 16px 20px 16px 16px;
+
 	flex-flow: column wrap;
 }
 .footer-right div {
 	display: flex;
 	justify-content: center;
 }
+.footer-middle {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-56px, 0);
+	width: 80px;
+	height: 80px;
+}
+.footer-middle img {
+	height: 80px;
+	border-radius: 999px;
+	box-shadow: 4px 8px 20px 0px #0008;
+}
+.footer-middle a {
+
+}
+
 footer a {
 	color: white;
 	text-decoration: none;
