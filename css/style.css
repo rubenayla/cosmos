@@ -189,11 +189,18 @@ header img {
 .first-section {
 	padding: 80px 16px 50px 16px !important;
 }
-
+#index-image-section {
+	display: flex;
+	justify-content: space-around;
+	height: 30vw;
+	min-height: 200px;
+	max-height: 300px;
+}
 .image-section {
 	display: flex;
 	justify-content: space-around;
-	height: 256px;
+	height: 30vw;
+	max-height: 512px;
 }
 .entities {
 	display: flex;
