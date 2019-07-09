@@ -12,10 +12,6 @@ firebase.auth().onAuthStateChanged(function(user) {
 		var photoURL= user.photoURL;
 		var emailVerified = user.emailVerified;
 		var uid = user.uid;
-		
-
-
-
 
 		// Welcome message
 		if (name != null) {
@@ -44,13 +40,31 @@ firebase.auth().onAuthStateChanged(function(user) {
 		});
 		*/
 		firebase.database().ref('users/' + user.uid).once('value').then(function(snapshot){
-			document.getElementById("username-input").value = snapshot.val().username;
-			document.getElementById("surname-input").value = snapshot.val().surname;
-			document.getElementById("bio-input").value = snapshot.val().bio;
-			document.getElementById("freetext-input").value = snapshot.val().freetext;
-		});
+			if (snapshot.val().username != undefined){
+				document.getElementById("username-input").value = snapshot.val().username;
+			} else {
+				document.getElementById("username-input").value = null;
+			}
 
-		
+			if (snapshot.val().surname != undefined){
+				document.getElementById("surname-input").value = snapshot.val().surname;
+			} else {
+				document.getElementById("surname-input").value = null;
+			}
+
+			if (snapshot.val().bio != undefined){
+				document.getElementById("bio-input").value = snapshot.val().bio;
+			} else {
+				document.getElementById("surname-input").value = null;
+			}
+
+			if (snapshot.val().freetext != undefined){
+				document.getElementById("freetext-input").value = snapshot.val().freetext;
+			} else {
+				document.getElementById("freetext-input").value = null;
+			}
+			// TODO: MAKE THIS SHORT AND ELEGANT
+		});
 
 	} else {
 		// No user is signed in.
