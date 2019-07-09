@@ -44,6 +44,8 @@ firebase.auth().onAuthStateChanged(function(user) {
 		});
 		*/
 		firebase.database().ref('users/' + user.uid).once('value').then(function(snapshot){
+			document.getElementById("username-input").value = snapshot.val().username;
+			document.getElementById("surname-input").value = snapshot.val().surname;
 			document.getElementById("bio-input").value = snapshot.val().bio;
 			document.getElementById("freetext-input").value = snapshot.val().freetext;
 		});
@@ -168,7 +170,9 @@ function update(){
 	// Profile data to DB
 	firebase.database().ref('users/' + user.uid).set({
 		email: user.email,
+		username: document.getElementById("username-input").value,
 		name: user.displayName,
+		surname: document.getElementById("surname-input").value,
 		photo_url: user.photoURL,
 		bio: document.getElementById("bio-input").value,
 		freetext: document.getElementById("freetext-input").value
