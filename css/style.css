@@ -17,7 +17,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-	background: #bbb;
+	background: #aaa;
 	border-radius: 50px;
 	border-left: solid 1px #eee;
 	border-right: solid 1px #eee;
@@ -65,7 +65,7 @@ header {
 	display: flex;
 	top: 0;
 	width: 100%;
-	height: 56px;
+	min-height: 56px;
 	z-index: 10;
 
 	font-size: 16px;
@@ -319,6 +319,47 @@ ion-icon {
 }
 
 
-@media screen and (max-width: 600px) {
-	
+@media screen and (max-width: 850px) {
+	body {
+		font-size: small;
+	}
+	header {
+		font-size: xx-small;
+
+	}
+	header nav {
+		padding: 0 2px;
+	}
+	header a {
+		padding: 12px 1px;
+	}
+	header a:hover {
+		padding: 12px 1px;
+	}
+	header img {
+		height: 35px;
+		width: 35px;
+	}
+	#icon {
+		padding: 4px;
+	}
+
+
+
+
+
+
+	footer {
+		padding: 0px 8px;
+		text-align: left;
+		font-size: x-small;
+	}
+	.footer-left {
+		flex-flow: column;
+		padding: 16px;
+	}
+	footer ul {
+		padding: 0;
+		margin: 0;
+	}
 }
