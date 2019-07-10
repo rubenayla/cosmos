@@ -63,6 +63,9 @@ firebase.auth().onAuthStateChanged(function(user) {
 			} else {
 				document.getElementById("freetext-input").value = null;
 			}
+			if (user.emailVerified = 'false'){
+				document.getElementById("verify-email").innerHTML = '<button onclick="verifyEmail()">Verificar email</button>';
+			}
 			// TODO: MAKE THIS SHORT AND ELEGANT
 		});
 
@@ -206,7 +209,7 @@ function update(){
 		name: user.displayName,
 		surname: document.getElementById("surname-input").value,
 		photo_url: user.photoURL,
-		emailVerified: user.emailVerified,
+		emailVerified: user.emailVerified, // Not secure
 		bio: document.getElementById("bio-input").value,
 		freetext: document.getElementById("freetext-input").value
 	});
