@@ -63,8 +63,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 			} else {
 				document.getElementById("freetext-input").value = null;
 			}
-			alert(user.emailVerified);
-			if (user.emailVerified == 'false'){
+			if (user.emailVerified == false){
 				document.getElementById("verify-email").innerHTML = '<button onclick="verifyEmail()">Verificar email</button>';
 			}
 			// TODO: MAKE THIS SHORT AND ELEGANT
