@@ -206,6 +206,7 @@ function update(){
 		name: user.displayName,
 		surname: document.getElementById("surname-input").value,
 		photo_url: user.photoURL,
+		emailVerified: user.emailVerified,
 		bio: document.getElementById("bio-input").value,
 		freetext: document.getElementById("freetext-input").value
 	});
