@@ -144,8 +144,8 @@ function google_login(){
 // 		alert(error);
 // 	});
 // }
-function forgotten(){
-	var email = document.getElementById("email-input").value;
+function passwordForgotten(){
+	var email = document.getElementById('email-input-login').value;
 	var auth = firebase.auth();
 
 	auth.sendPasswordResetEmail(email).then(function() {
@@ -154,7 +154,25 @@ function forgotten(){
 		alert(error);
 	});
 }
-function delete_account() {
+function resetPassword(){
+	var email = firebase.auth().currentUser.email;
+	var auth = firebase.auth();
+
+	auth.sendPasswordResetEmail(email).then(function() {
+		alert("Email sent");
+	}).catch(function(error) {
+		alert(error);
+	});
+}
+function verifyEmail(){
+	firebase.auth().currentUser.sendEmailVerification().then(function(){
+		alert("Email sent");
+	}).catch(function(error){
+		alert(error);
+	})
+}
+
+function deleteAccount() {
 	var user = firebase.auth().currentUser;
 
 	user.delete().then(function() {
