@@ -330,6 +330,11 @@ ion-icon {
 	header nav {
 		padding: 0 2px;
 	}
+	header ul {
+		display: flex;
+		width: 
+		justify-content: center;
+	}
 	header a {
 		padding: 12px 1px;
 	}
@@ -363,4 +368,5 @@ ion-icon {
 	.first-section {
 		padding: 160px 16px 50px 16px;
 	}
+	
 }

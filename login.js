@@ -40,33 +40,38 @@ firebase.auth().onAuthStateChanged(function(user) {
 		});
 		*/
 		firebase.database().ref('users/' + user.uid).once('value').then(function(snapshot){
-			if (snapshot.val().username != undefined){
-				document.getElementById("username-input").value = snapshot.val().username;
-			} else {
-				document.getElementById("username-input").value = null;
-			}
+			// If the user exists at the DB... 
+			// (otherwise wait the register function to create it. It must be first
+			// authenticated)
+			if(snapshot.val() != null){
+				if (snapshot.val().username != undefined && snapshot.val().username != null){
+					document.getElementById("username-input").value = snapshot.val().username;
+				} else {
+					document.getElementById("username-input").value = null;
+				}
 
-			if (snapshot.val().surname != undefined){
-				document.getElementById("surname-input").value = snapshot.val().surname;
-			} else {
-				document.getElementById("surname-input").value = null;
-			}
+				if (snapshot.val().surname != undefined){
+					document.getElementById("surname-input").value = snapshot.val().surname;
+				} else {
+					document.getElementById("surname-input").value = null;
+				}
 
-			if (snapshot.val().bio != undefined){
-				document.getElementById("bio-input").value = snapshot.val().bio;
-			} else {
-				document.getElementById("surname-input").value = null;
-			}
+				if (snapshot.val().bio != undefined){
+					document.getElementById("bio-input").value = snapshot.val().bio;
+				} else {
+					document.getElementById("surname-input").value = null;
+				}
 
-			if (snapshot.val().freetext != undefined){
-				document.getElementById("freetext-input").value = snapshot.val().freetext;
-			} else {
-				document.getElementById("freetext-input").value = null;
-			}
-			if (user.emailVerified == false){
-				document.getElementById("verify-email").innerHTML = '<button onclick="verifyEmail()">Verificar email</button>';
-			}
-			// TODO: MAKE THIS SHORT AND ELEGANT
+				if (snapshot.val().freetext != undefined){
+					document.getElementById("freetext-input").value = snapshot.val().freetext;
+				} else {
+					document.getElementById("freetext-input").value = null;
+				}
+				if (user.emailVerified == false){
+					document.getElementById("verify-email").innerHTML = '<button onclick="verifyEmail()">Verificar email</button>';
+				}
+				// TODO: MAKE THIS SHORT AND ELEGANT
+			};
 		});
 
 	} else {
@@ -101,6 +106,10 @@ function register(){
 		
 		alert("Error: " + errorMessage);
 	});
+	// Just after registry, the onAuthStateChanged function will try to show data that 
+	// still doesn't exist in the DB, and will show an error. Wait 100ms to have a 
+	// registered user, and then update the data to the DB.
+	setTimeout(update, 5000);
 }
 function logout(){
 	firebase.auth().signOut();
@@ -188,6 +197,7 @@ function deleteAccount() {
 
 
 function update(){
+	// console.log('updating data...');
 	var user = firebase.auth().currentUser;
 	
 	// Update auth data (name and photoURL)

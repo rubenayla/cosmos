@@ -9,6 +9,8 @@
 	box-shadow: 2px 2px 8px 0px #0008;
 	border-radius: 8px;
 	display: flex;
+	flex-flow: column;
+	text-align: center;
 	justify-content: center;
 	min-width: 320px;
 	max-width: 450px;
@@ -29,6 +31,7 @@
 	transition: color .1s, background .1s;
 	padding: 8px;
 	margin: 2px;
+	line-height: 34px;
 
 	display: flex;
 	align-items: center;
