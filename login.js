@@ -44,29 +44,22 @@ firebase.auth().onAuthStateChanged(function(user) {
 			// (otherwise wait the register function to create it. It must be first
 			// authenticated)
 			if(snapshot.val() != null){
-				if (snapshot.val().username != undefined && snapshot.val().username != null){
+				if (snapshot.val().username != undefined){
 					document.getElementById("username-input").value = snapshot.val().username;
-				} else {
-					document.getElementById("username-input").value = null;
 				}
 
 				if (snapshot.val().surname != undefined){
 					document.getElementById("surname-input").value = snapshot.val().surname;
-				} else {
-					document.getElementById("surname-input").value = null;
 				}
 
 				if (snapshot.val().bio != undefined){
 					document.getElementById("bio-input").value = snapshot.val().bio;
-				} else {
-					document.getElementById("surname-input").value = null;
 				}
 
 				if (snapshot.val().freetext != undefined){
 					document.getElementById("freetext-input").value = snapshot.val().freetext;
-				} else {
-					document.getElementById("freetext-input").value = null;
 				}
+				
 				if (user.emailVerified == false){
 					document.getElementById("verify-email").innerHTML = '<button onclick="verifyEmail()">Verificar email</button>';
 				}
